@@ -56,6 +56,7 @@ int main()
             }
             printf("Response sent: F0 02\n");
         }
+        usleep(100000);  // 100ミリ秒待機
     }
 
     // I2Cデバイスをクローズ
