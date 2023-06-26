@@ -34,7 +34,7 @@ int main()
         if (read(i2cFile, buffer, 4) != 4)
         {
             perror("Failed to read from the I2C bus.\n");
-            return 1;
+            continue
         }
 
         // 受信したデータを表示
@@ -52,7 +52,7 @@ int main()
             if (write(i2cFile, response, 2) != 2)
             {
                 perror("Failed to write to the I2C bus.\n");
-                return 1;
+                continue
             }
             printf("Response sent: F0 02\n");
         }
